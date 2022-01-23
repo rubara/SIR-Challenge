@@ -15,30 +15,99 @@ public class Team {
 
     @Column(nullable = false, unique = true, length = 30)
     private String teamName;
+
     @Column(nullable = false, unique = true, length = 20)
     private String teamCap;
+
     @Column(nullable = false, unique = true, length = 30)
     private String capMail;
+
     @Column(nullable = false, unique = true, length = 1)
     private int posCap;
+
+    @Column(nullable = false, unique = true, length = 5)
+    private int p1mmr;
+
     @Column(nullable = false, unique = true, length = 20)
     private String player2;
+
     @Column(nullable = false, unique = true, length = 1)
     private int posPlayer2;
+
+    @Column(nullable = false, unique = true, length = 5)
+    private int p2mmr;
+
     @Column(nullable = false, unique = true, length = 20)
     private String player3;
+
     @Column(nullable = false, unique = true, length = 1)
     private int posPlayer3;
+
+    @Column(nullable = false, unique = true, length = 5)
+    private int p3mmr;
+
     @Column(nullable = false, unique = true, length = 20)
     private String player4;
+
     @Column(nullable = false, unique = true, length = 1)
     private int posPlayer4;
+
+    @Column(nullable = false, unique = true, length = 5)
+    private int p4mmr;
+
     @Column(nullable = false, unique = true, length = 20)
     private String player5;
+
     @Column(nullable = false, unique = true, length = 1)
     private int posPlayer5;
+
+    @Column(nullable = false, unique = true, length = 5)
+    private int p5mmr;
+
     @Column(nullable = false, unique = true, length = 80)
     private String teamLogo;
+
+
+
+    public int getP1mmr() {
+        return p1mmr;
+    }
+
+    public void setP1mmr(int p1mmr) {
+        this.p1mmr = p1mmr;
+    }
+
+    public int getP2mmr() {
+        return p2mmr;
+    }
+
+    public void setP2mmr(int p2mmr) {
+        this.p2mmr = p2mmr;
+    }
+
+    public int getP3mmr() {
+        return p3mmr;
+    }
+
+    public void setP3mmr(int p3mmr) {
+        this.p3mmr = p3mmr;
+    }
+
+    public int getP4mmr() {
+        return p4mmr;
+    }
+
+    public void setP4mmr(int p4mmr) {
+        this.p4mmr = p4mmr;
+    }
+
+    public int getP5mmr() {
+        return p5mmr;
+    }
+
+    public void setP5mmr(int p5mmr) {
+        this.p5mmr = p5mmr;
+    }
 
     public Long getId() {
         return id;

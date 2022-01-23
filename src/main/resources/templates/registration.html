@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Tournament registration form</title>
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/cssandjs/style.css"/>
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container text-center">
+<div class="container">
     <div>
         <h1>Team Registration - Sign Up</h1>
     </div>
-    <form th:action="@{/registration}" th:object="${team}"
+    <form th:action="registration" th:object="${team}"
           method="post" style="max-width: 600px; margin: 0 auto;">
         <div class="m-3">
             <div class="form-group row">
                 <label class="col-4 col-form-label">E-mail: </label>
                 <div class="col-8">
-                    <input type="email" th:field="*{email}" class="form-control" required />
+                    <input type="email" field="*{capMail}" class="form-control" required />
+                    <label class="col-4 col-form-label">Position</label>
+                    <input type="text" field="*{posCap}">
+                    <label class="col-4 col-form-label">MMR</label>
+                    <input type="text" field="*{p1mmr}">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label class="col-4 col-form-label">Password: </label>
                 <div class="col-8">
-                    <input type="password" th:field="*{password}" class="form-control"
+                    <input type="password" field="*{password}" class="form-control"
                            required minlength="6" maxlength="10"/>
                 </div>
             </div>
@@ -33,7 +37,7 @@
             <div class="form-group row">
                 <label class="col-4 col-form-label">First Name: </label>
                 <div class="col-8">
-                    <input type="text" th:field="*{firstName}" class="form-control"
+                    <input type="text" field="*{firstName}" class="form-control"
                            required minlength="2" maxlength="20"/>
                 </div>
             </div>
@@ -41,7 +45,7 @@
             <div class="form-group row">
                 <label class="col-4 col-form-label">Last Name: </label>
                 <div class="col-8">
-                    <input type="text" th:field="*{lastName}" class="form-control"
+                    <input type="text" field="*{lastName}" class="form-control"
                            required minlength="2" maxlength="20" />
                 </div>
             </div>

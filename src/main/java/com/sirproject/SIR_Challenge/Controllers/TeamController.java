@@ -1,5 +1,7 @@
-package com.sirproject.SIR_Challenge;
+package com.sirproject.SIR_Challenge.Controllers;
 
+import com.sirproject.SIR_Challenge.Team;
+import com.sirproject.SIR_Challenge.Repositories.TeamsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +18,7 @@ public class TeamController {
         return "index";
     }
 
-    @GetMapping("/register")
+    @GetMapping("/registration")
     public String showRegistrationForm(Model model) {
         model.addAttribute("team", new Team());
 

@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Strategy in rush Registration</title>
-  <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+ <!--<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">-->
+  <link rel="stylesheet" type="text/css" href="/styles/cssandjs/style.css"/>
   <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container text-center">
-  <h1>Registration form</h1>
-  <h3><a th:href="/@{/teams}">List of Teams</a></h3>
-  <h3><a th:href="/@{/registration}">Registration</a></h3>
+<div class="container">
+  <nav class="menu">
+    <a th:href="teams">List of Teams</a>
+    <a th:href="registration">Registration</a>
+    <a th:href="rules">Rules</a>
+  </nav>
+
 </div>
 
 </body>
